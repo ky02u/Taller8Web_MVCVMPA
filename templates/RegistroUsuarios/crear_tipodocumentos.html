@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block extrahead %}
+  <title>Nuevo Tipo de documento</title>
+{% endblock extrahead%}
+
+
+{% block content %}
+<div class="container">
+    <h1>Crear nuevo tipo de documento:</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>  
+{% endblock content %}

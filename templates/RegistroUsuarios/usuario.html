@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block extrahead %}
+    <title>Persona</title>
+{% endblock extrahead %}
+
+{% block content %}
+<div class="container">
+    <h1>Persona</h1>
+    {% if Personas %}
+        <u1>
+            {% for persona in personas %}
+                <li><b>ID</b>{{Persona.id}} <b>Nombre:</b>{{ Persona.nombre}}<b>Apellido:</b>{{ Persona.apellido}}<b>idtipodocumento:</b> {{Persona.idtipodocumento}}
+                <b>documento:</b>{{ Persona.documento}}<b>IdLugarresidencia:</b>{{ Persona.idlugarresiedencia}}<b>Fechadenacimiento:</b>{{ Persona.fechadenacimiento}}
+                <b>Email:</b>{{ Persona.email}}<b>Telefono:</b>{{ Persona.telefono}}<b>User:</b>{{ Persona.usuario}}
+                <b>Contraseña:</b>{{ Persona.contraseña}}<b>ConfirmarContraseña:</b>{{ Persona.confirmarcontraseña}}<b>LugardeNacimiento:</b>{{ Persona.lugardenacimiento}}
+                </li>
+            {% endfor %}    
+        </u1> 
+{% endif %}
+{% endblock content %}

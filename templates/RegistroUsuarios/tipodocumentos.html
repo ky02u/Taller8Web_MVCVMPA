@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block extrahead %}
+    <title>TipoDocumento</title>
+{% endblock extrahead %}
+
+{% block content %}
+<div class="container">
+    <h1>Tipo De Documentos</h1>
+    {% if tipodocumentos %}
+        <u1>
+            {% for tipodocumento in tipodocumentos %}
+                <li><b>ID</b>{{tipodocumento.id}} <b>Nombre:</b>{{ tipodocumento.nombre}}<b>Descripcion:</b> {{tipodocumento.descripcion}} </li>
+            {% endfor %}    
+        </u1> 
+{% endif %}
+{% endblock content %}
